@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+    shrink-to-fit=no">
+    <title>Untirta Inventory</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <!-- NAVBAR -->
+  <nav id="main-navbar" class="navbar navbar-expand-md navbar-darm bg-light py-0">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="img/favicon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span class="pl-2">Hello, <?php echo $_SESSION["username"]; ?></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link p-3 <?php echo basename($_SERVER['PHP_SELF']) 
+            == "tampil_barang.php" ? "active" : ""; ?>" href="tampil_barang.php">
+            Tabel Barang</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-3 <?php echo basename($_SERVER['PHP_SELF']) 
+            == "profile.php" ? "active" : ""; ?>" href="profile.php">
+            My Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-3" href="logout.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
